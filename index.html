@@ -10,30 +10,67 @@
 
 <body>
     <header class="header">
-        <div class="header__flex-1">
-            <div class="logo"><a href="#"></a></div>
-            <nav>
-                <ul class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Documentation</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header__flex-2">
-            <div class="social-icons">
-                <a href="#"><img src="images/header/f.svg" alt="Facebook"></a>
-                <a href="#"><img src="images/header/tg.svg" alt="Telegram"></a>
-                <a href="#"><img src="images/header/tw.svg" alt="Twitter"></a>
-                <a href="#"><img src="images/header/m.svg" alt="Mail.ru"></a>
+        <div class="header-content">
+            <div class="header__flex-1">
+                <div class="logo menu-none"><a href="#"></a></div>
+                <nav>
+                    <div id="menu-adaptive" class="menu-adaptive"></div>
+                    <ul id="menu" class="menu menu-none">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="started"><a href="#">Get started</a></div>
+            <div class="header__flex-2">
+                <div class="social-icons">
+                    <a href="#"><img src="images/header/f.svg" alt="Facebook"></a>
+                    <a href="#"><img src="images/header/tg.svg" alt="Telegram"></a>
+                    <a href="#"><img src="images/header/tw.svg" alt="Twitter"></a>
+                    <a href="#"><img src="images/header/m.svg" alt="Mail.ru"></a>
+                </div>
+                <div><button id="started" class="started">Get started</button></div>
+            </div>
         </div>
 
     </header>
     <button id="calculator" class="calculator">Калькулятор</button>
+    <section id="modal-form" class="modal-form wrap d-none">
+        <form class="login wrap" method="GET">
+            <input name="login" class="login__input" placeholder="Логин" type="text">
+            <input name="password" class="login__input" placeholder="Пароль" type="password">
+            <button class="login__btn" type="submit">Отправить</button>
+            <span id="close-form" class="close-form">&#10006;</span>
+        </form>
+    </section>
+    <div class="slider">
+        <ul id="slides">
+            <li class="slide showing"><a href="#"></a></li>
+            <li class="slide"><a href="#"></a></li>
+            <li class="slide"><a href="#"></a></li>
+            <li class="slide"><a href="#"></a></li>
+            <li class="slide"><a href="#"></a></li>
+        </ul>
+        <span id="toggle-previous" class="toggle toggle-previous">&#8656;</span>
+        <span id="toggle-next" class="toggle toggle-next">&#8658;</span>
+        <p id="toggle-radio">
+            <input checked value="0" name="toggle" type="radio">
+            <input value="1" name="toggle" type="radio">
+            <input value="2" name="toggle" type="radio">
+            <input value="3" name="toggle" type="radio">
+            <input value="4" name="toggle" type="radio">
+
+        </p>
+        <ul id="slides-min">
+            <li class="slide-min showing-min"><img id="0" src="./images/Features/img_1.jpg" alt=""></li>
+            <li class="slide-min"><img id="1" src="./images/Features/img_2.jpg" alt=""></li>
+            <li class="slide-min"><img id="2" src="./images/Features/img_3.jpg" alt=""></li>
+            <li class="slide-min"><img id="3" src="./images/Features/img_4.jpg" alt=""></li>
+            <li class="slide-min"><img id="4" src="./images/Features/img_5.jfif" alt=""></li>
+        </ul>
+    </div>
     <section class="customers-wrap">
         <div class="customers">
             <a href="#"><img src="images/Block_2/bitbucket.svg" alt=""></a>
@@ -43,7 +80,21 @@
             <a href="#"><img src="images/Block_2/audi.svg" alt=""></a>
         </div>
     </section>
-
+    <section class="html-3">
+        <div class="desktop-mobile">
+            <li class="text-2">DESKTOP AND MOBILE APP</li>
+            <h2 class="plan-manage">Plan <b> and </b> manage</h2>
+            <li class="text-pm">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an,
+                insolens gubergren
+                similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat.
+                Eum
+                an expetenda consequat.</li>
+            <p class="pm-buttons">
+                <a class="viev-v" href="#"> Viev video</a>
+                <a class="sea-f" href="#">sea features</a>
+            </p>
+        </div>
+    </section>
     <main>
         <section class="wrapper-features">
             <div class="features">
@@ -87,22 +138,26 @@
                         </p>
                     </div>
                 </div>
-                <div class="features__buttons">
+                <p class="features__buttons">
                     <a class="read" href="#">Read more</a>
                     <a class="or" href="#">OR</a>
                     <a class="get_1" href="#">Get started</a>
-                </div>
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="custuser">
+                <div></div>
+                <div></div>
             </div>
         </section>
     </main>
-    <section>
-        
-    </section>
     <footer class="footer">
         <div class="get-started">
             <a class="plan" href="#">plan your life</a>
             <h2 class="get-started__h"><a href="#">Get <b>started</b> now</a></h2>
-            <p class="get-started__text"><a href="#">Brute laoreet efficlendi id his,ea ilum nonumes luptatum pro. Usu atqul laudem
+            <p class="get-started__text"><a href="#">Brute laoreet efficlendi id his,ea ilum nonumes luptatum pro. Usu
+                    atqul laudem
                     an,insolens gubergren
                     similique est cu. Et vel modus congue vituperats.</a></p>
             <p class="get-started__buttons">
